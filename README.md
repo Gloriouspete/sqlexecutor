@@ -1,5 +1,3 @@
-# SQLEXECUTOR
-
 # SQL Executor
 
 SQL Executor is a lightweight library for executing mySQL queries in Node.js applications,
@@ -13,7 +11,8 @@ You can install SQL Executor via npm:
 ```bash
 npm install sqlexecutor
 
-````
+```
+
 or
 
 ```bash
@@ -26,15 +25,13 @@ yarn add sqlexecutor
 To use SQL Executor in your Node.js application, first require it in your file:
 
 ```javascript
-
 const Executor = require("sqlexecutor");
-
 ```
 
 Then, create an instance of `Executor` with your database configuration:
 
 ```javascript
-const worker = new Executor({
+const executor = new Executor({
   host: "localhost",
   user: "root",
   password: "",
@@ -42,7 +39,7 @@ const worker = new Executor({
 });
 ```
 
-**_Note:_**  There are default parameters set for you, see - [Table](##table) ,You only need to set the ones you need to change.
+**_Note:_** There are default parameters set for you, see - [Table](##table) ,You only need to set the ones you need to change.
 
 Then create an executor by calling the worker
 
@@ -62,9 +59,41 @@ executor("SELECT * FROM table_name")
   });
 ```
 
+## Or
+
+You can instantiate it directly by adding `.call` to the Executor()
+
+```javascript
+const Executor = require("sqlexecutor");
+
+const executor = new Executor({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "my_database",
+}).call;
+
+executor("SELECT * FROM table_name")
+  .then((results) => {
+    console.log(results);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
 Alternatively, you can use the `executeQuery` method directly:
 
 ```javascript
+const Executor = require("sqlexecutor");
+
+const worker = new Executor({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "my_database",
+});
+
 worker
   .executeQuery("SELECT * FROM table_name")
   .then((results) => {
@@ -74,6 +103,8 @@ worker
     console.error(error);
   });
 ```
+
+There is no difference between `executor` and `worker.executeQuery` , it totally depends on preference.
 
 ## API for bundle pooling
 
@@ -121,7 +152,7 @@ executor('SELECT * FROM table_name where email = ?',[youremail@mail.com])
 
 ## Table
 
-This is the default parameters table, This default is set, ssl options is not set but it can be added by you.
+This is the default parameters table, You only need to add parameters that differs from the dafault that you might want to use.
 
 | Parameters         | Default      |
 | ------------------ | ------------ |
@@ -140,7 +171,4 @@ This is the default parameters table, This default is set, ssl options is not se
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-
-For donations and collaboration , email [email](mailto:peterninyo4@gmail.com)
-
-
+For donations and collaboration , you can get to me through [email](mailto:peterninyo4@gmail.com)
