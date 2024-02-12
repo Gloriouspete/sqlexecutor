@@ -1,0 +1,27 @@
+{
+  "name": "sqlexecutor",
+  "version": "0.0.3",
+  "description": "sqlexecutor is a lightweight and flexible Node-js library for executing MYSql queries with ease and handle results asynchronously. The library provides a simple and intuitive interface for interacting with your database, allowing you to focus on building your application",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gloriouspete",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriouspete/sqlexecutor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gloriouspete/sqlexecutor/issues"
+  },
+  "homepage": "https://github.com/gloriouspete/sqlexecutor#readme",
+  "dependencies": {
+    "mysql2": "^3.0.0"
+  }
+}
