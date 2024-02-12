@@ -1,6 +1,6 @@
 {
   "name": "sqlexecutor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "sqlexecutor is a lightweight and flexible Node-js library for executing MYSql queries with ease and handle results asynchronously. The library provides a simple and intuitive interface for interacting with your database, allowing you to focus on building your application",
   "main": "index.js",
   "types": "index.d.ts",

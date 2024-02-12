@@ -1,6 +1,5 @@
 # SQLEXECUTOR
 
-````markdown
 # SQL Executor
 
 SQL Executor is a lightweight library for executing mySQL queries in Node.js applications,
@@ -15,6 +14,12 @@ You can install SQL Executor via npm:
 npm install sqlexecutor
 
 ````
+or
+
+```bash
+yarn add sqlexecutor
+
+```
 
 ## Usage
 
@@ -37,7 +42,7 @@ const worker = new Executor({
 });
 ```
 
-*Note* There are default parameters set for you, see - [Table](##table) ,You only need to set the ones you need to change.
+**_Note:_**  There are default parameters set for you, see - [Table](##table) ,You only need to set the ones you need to change.
 
 Then create an executor by calling the worker
 
@@ -135,7 +140,7 @@ This is the default parameters table, This default is set, ssl options is not se
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-```
 
-Feel free to customize this template to include more information about your library, such as advanced usage, examples, configuration options, etc. Make sure to replace placeholders with actual information relevant to your library.
-```
+For donations and collaboration , email [email](mailto:peterninyo4@gmail.com)
+
+
